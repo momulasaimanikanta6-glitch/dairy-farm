@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Milk Products</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="contact-bg">
+<div class="navbar">
+    <a href="home.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="products.html">Milk Products</a>
+    <a href="contact.html">Contact</a>
+    <a href="order.html">Order</a>
+</div>
+<h1 style="text-align:center;">Our Dairy Products</h1>
+
+<div class="product-container">
+
+    <div class="product" onclick="showPrice('Milk - ₹100 per liter')">
+        <img src="images/milk.jpg">
+        <p>Milk</p>
+    </div>
+
+    <div class="product" onclick="showPrice('Curd - ₹90 per kg')">
+        <img src="images/curd.jpg">
+        <p>Curd</p>
+    </div>
+
+    <div class="product" onclick="showPrice('Butter - ₹125 per 500g')">
+        <img src="images/butter.jpg">
+        <p>Butter</p>
+    </div>
+
+    <div class="product" onclick="showPrice('Ghee - ₹600 per liter')">
+        <img src="images/ghee.jpg">
+        <p>Ghee</p>
+    </div>
+
+    <div class="product" onclick="showPrice('Paneer - ₹350 per kg')">
+        <img src="images/paneer.jpg">
+        <p>Paneer</p>
+    </div>
+
+</div>
+
+<h2 id="price" style="text-align:center; color:white;"></h2>
+
+<script>
+function showPrice(price) {
+    document.getElementById("price").innerHTML = price;
+}
+</script>
+
+</body>
+</html>

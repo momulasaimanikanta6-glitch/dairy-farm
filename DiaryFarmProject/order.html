@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="order-bg">
+<div class="navbar">
+    <a href="home.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="products.html">Milk Products</a>
+    <a href="contact.html">Contact</a>
+    <a href="order.html">Order</a>
+</div>
+<div class="content">
+    <h1>Place Your Order</h1>
+
+    <form onsubmit="placeOrder(event)">
+    <input type="text" id="name" placeholder="Name" required>
+    <input type="tel" id="phone" placeholder="Phone Number" required>
+    <select id="product">
+        <option>Milk</option>
+        <option>Curd</option>
+        <option>Butter</option>
+        <option>Ghee</option>
+        <option>Paneer</option>
+    </select>
+    <input type="number" id="qty" placeholder="Quantity" required>
+    <button type="submit">Order</button>
+    </form>
+
+<div id="output"></div>
+
+<script>
+function placeOrder(event) {
+    event.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let phone = document.getElementById("phone").value;
+    let product = document.getElementById("product").value;
+    let qty = document.getElementById("qty").value;
+
+    document.getElementById("output").innerHTML =
+        "Order Placed Successfully!<br>" +
+        "Name: " + name + "<br>" +
+        "Phone: " + phone + "<br>" +
+        "Product: " + product + "<br>" +
+        "Quantity: " + qty;
+}
+</script>
+
+</body>
+</html>
